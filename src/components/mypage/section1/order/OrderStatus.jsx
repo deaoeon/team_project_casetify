@@ -1,6 +1,14 @@
+import { useSelector } from 'react-redux';
 import { OrderStatusStyle } from './style';
 
 const OrderStatus = () => {
+    const { orderList } = useSelector((state) => state.order);
+    let completeCnt = 0;
+
+    if (orderList.length > 0) {
+        completeCnt = orderList.filter((item) => item.isComplete === true).length;
+    }
+
     return (
         <OrderStatusStyle>
             <div className="title-area">
@@ -30,7 +38,7 @@ const OrderStatus = () => {
                 </li>
                 <li>
                     {' '}
-                    <span>0</span>
+                    <span>{completeCnt}</span>
                     <span>배송 준비중</span>
                 </li>
                 <li>
