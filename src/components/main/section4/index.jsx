@@ -38,6 +38,9 @@ const Section4 = () => {
                     </li>
                 ))}
             </ul>
+            <div className="bg">
+                <img src="/images/section4/bg.png" alt="" />
+            </div>
         </Section4Style>
     );
 };

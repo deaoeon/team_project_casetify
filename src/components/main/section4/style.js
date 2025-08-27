@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Section4Style = styled.section`
     height: 2268px;
     .contents-list {
+        position: relative;
+        z-index: 2;
         margin: auto;
         width: 1440px;
         height: 2068px;
@@ -80,6 +82,20 @@ export const Section4Style = styled.section`
                 justify-content: center;
                 gap: 60px;
             }
+        }
+    }
+    .bg {
+        background-color: #1a1a1a;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: -100%;
+        left: 0;
+        opacity: 0.2;
+        img {
+            width: 100%;
+            height: 100%;
         }
     }
 `;

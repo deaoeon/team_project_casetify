@@ -2,10 +2,12 @@ import styled from 'styled-components';
 
 export const Section3Style = styled.section`
     .inner {
+        z-index: 1;
         width: 100%;
         height: 1040px;
         position: relative;
         overflow: hidden;
+
         .rotation-img {
             position: absolute;
             top: 0;
@@ -22,7 +24,7 @@ export const Section3Style = styled.section`
             bottom: 0;
             width: 400px;
             height: 300px;
-            background: linear-gradient(180deg, rgba(26, 26, 26, 0) 32.46%, #1a1a1a 70%);
+            background: linear-gradient(180deg, rgba(26, 26, 26, 0) 32.46%, #151515 90%);
         }
         .right {
             position: absolute;
@@ -30,7 +32,7 @@ export const Section3Style = styled.section`
             bottom: 0;
             width: 400px;
             height: 300px;
-            background: linear-gradient(180deg, rgba(26, 26, 26, 0) 32.46%, #1a1a1a 70%);
+            background: linear-gradient(180deg, rgba(26, 26, 26, 0) 32.46%, #151515 90%);
         }
         article {
             position: absolute;
@@ -84,6 +86,20 @@ export const Section3Style = styled.section`
                     font-size: 16px;
                 }
             }
+        }
+    }
+    .bg {
+        background-color: #1a1a1a;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: -100%;
+        left: 0;
+        opacity: 0.2;
+        img {
+            width: 100%;
+            height: 100%;
         }
     }
 `;
