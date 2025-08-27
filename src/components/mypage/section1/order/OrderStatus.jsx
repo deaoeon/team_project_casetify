@@ -81,7 +81,7 @@ const OrderStatus = () => {
                 <li>
                     {' '}
                     <span>0</span>
-                    <span>배송완료</span>
+                    <span>배송완료1</span>
                 </li>
             </ul>
         </OrderStatusStyle>
