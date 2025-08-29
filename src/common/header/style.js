@@ -46,6 +46,7 @@ export const MenuStyle = styled.div`
     transition: 0.5s;
     display: none;
     .inner {
+        padding-top: 30px;
         width: 1700px;
         height: 904px;
         display: flex;
