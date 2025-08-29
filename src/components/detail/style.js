@@ -6,7 +6,7 @@ export const Section1Style = styled.section`
     align-items: center;
     flex-flow: column;
     gap: 80px;
-    margin-top: 100px;
+    margin-top: 70px;
     padding-top: 120px;
     .inner {
         width: 1440px;

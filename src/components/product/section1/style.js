@@ -5,7 +5,7 @@ export const Section1Style = styled.section`
     height: 900px;
     margin: 0 auto;
     background-color: #1a1a1a;
-    margin-top: 100px;
+    margin-top: 70px;
     .visual-section {
         margin: 0 auto;
         display: flex;
