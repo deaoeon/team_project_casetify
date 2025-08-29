@@ -32,6 +32,9 @@ const Section3 = () => {
                     </div>
                 </article>
             </div>
+            <div className="bg">
+                <img src="/images/section3/bg.png" alt="" />
+            </div>
         </Section3Style>
     );
 };
