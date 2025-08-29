@@ -21,6 +21,7 @@ export const Section5Style = styled.section`
             gap: 20px;
 
             .l-1st {
+                cursor: pointer;
                 width: 360px;
                 height: 210px;
                 background: rgba(136, 136, 136, 0.3);
@@ -43,8 +44,12 @@ export const Section5Style = styled.section`
                     top: 20px;
                     right: 20px;
                 }
+                &:hover {
+                    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
+                }
             }
             .l-2nd {
+                cursor: pointer;
                 width: 280px;
                 height: 160px;
                 margin-left: 79px;
@@ -73,8 +78,12 @@ export const Section5Style = styled.section`
                         font-size: 20px;
                     }
                 }
+                &:hover {
+                    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
+                }
             }
             .l-3rd {
+                cursor: pointer;
                 width: 320px;
                 height: 170px;
                 background: rgba(136, 136, 136, 0.3);
@@ -103,9 +112,13 @@ export const Section5Style = styled.section`
                         font-size: 20px;
                     }
                 }
+                &:hover {
+                    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
+                }
             }
         }
         .right {
+            z-index: 5;
             width: 420px;
             height: 1040px;
             display: flex;
@@ -151,6 +164,7 @@ export const Section5Style = styled.section`
                 }
             }
             .r_2nd {
+                cursor: pointer;
                 width: 360px;
                 height: 200px;
                 background: rgba(136, 136, 136, 0.3);
@@ -176,8 +190,12 @@ export const Section5Style = styled.section`
                         font-size: 24px;
                     }
                 }
+                &:hover {
+                    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
+                }
             }
             .r_3rd {
+                cursor: pointer;
                 width: 220px;
                 height: 170px;
                 background: rgba(136, 136, 136, 0.3);
@@ -203,8 +221,12 @@ export const Section5Style = styled.section`
                         font-size: 20px;
                     }
                 }
+                &:hover {
+                    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
+                }
             }
             .r_4th {
+                cursor: pointer;
                 width: 286px;
                 height: 210px;
                 background: rgba(136, 136, 136, 0.3);
@@ -229,6 +251,9 @@ export const Section5Style = styled.section`
                         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
                         font-size: 20px;
                     }
+                }
+                &:hover {
+                    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
                 }
             }
         }

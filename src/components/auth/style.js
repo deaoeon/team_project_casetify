@@ -12,7 +12,7 @@ export const ModalOverlay = styled.div`
 export const JoinStyle = styled.div`
     width: 540px;
     height: 741px;
-    border-radius: 50px;
+    border-radius: 20px;
     background: #1a1a1a;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
     position: fixed;
@@ -38,6 +38,9 @@ export const JoinStyle = styled.div`
         .logo {
             width: 200px;
             height: 70px;
+            position: relative;
+            top: -20px;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -78,13 +81,15 @@ export const JoinStyle = styled.div`
                 justify-content: center;
                 align-items: center;
                 border-radius: 10px;
-                color: rgba(136, 136, 136, 0.7);
                 border: 1px solid rgba(136, 136, 136, 0.53);
                 background-color: #1a1a1a;
                 color: #fff;
-                font-size: 14px;
+                color: rgba(136, 136, 136, 0.7);
+                font-family: Pretendard;
+                font-size: 8px;
+                font-style: normal;
                 font-weight: 500;
-                box-sizing: border-box;
+                line-height: normal;
                 &::placeholder {
                     display: flex;
                     justify-content: center;
@@ -109,6 +114,7 @@ export const JoinStyle = styled.div`
                 color: rgba(136, 136, 136, 0.7);
                 font-size: 14px;
                 font-weight: 500;
+
                 select {
                     background-color: inherit;
                     border-radius: 4px;
@@ -142,7 +148,7 @@ export const JoinStyle = styled.div`
         .join-btn {
             width: 280px;
             height: 50px;
-            border-radius: 20px;
+            border-radius: 50px;
             background: rgba(136, 136, 136, 0.2);
             color: rgba(255, 255, 255, 0.3);
             font-size: 18px;
@@ -165,15 +171,15 @@ export const JoinStyle = styled.div`
         justify-content: center;
         align-items: center;
         position: absolute;
-        right: 40px;
-        top: 40px;
+        right: 20px;
+        top: 20px;
     }
 `;
 
 export const LoginStyle = styled.div`
     width: 450px;
     height: 691px;
-    border-radius: 50px;
+    border-radius: 20px;
     background: #1a1a1a;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
     position: fixed;
@@ -194,6 +200,8 @@ export const LoginStyle = styled.div`
         .logo {
             width: 200px;
             height: 70px;
+            position: relative;
+            top: -30px;
             img {
                 width: 100%;
                 height: 100%;
@@ -260,7 +268,7 @@ export const LoginStyle = styled.div`
     .login-btn {
         width: 280px;
         height: 50px;
-        border-radius: 20px;
+        border-radius: 50px;
         background: rgba(136, 136, 136, 0.2);
         color: rgba(255, 255, 255, 0.3);
         font-size: 18px;
@@ -334,7 +342,7 @@ export const LoginStyle = styled.div`
         justify-content: center;
         align-items: center;
         position: absolute;
-        right: 40px;
-        top: 40px;
+        right: 20px;
+        top: 20px;
     }
 `;

@@ -37,7 +37,7 @@ const Section5 = () => {
                                 <span>취향을 담는 또 하나의 선택,</span>
                                 <strong>액세서리 컬렉션</strong>
                             </div>
-                            <div className="more">VIEW MORE</div>
+                            {/* <div className="more">VIEW MORE</div> */}
                         </Link>
                     </div>
                     <div className="r_2nd">
