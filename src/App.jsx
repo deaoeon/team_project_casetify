@@ -15,6 +15,7 @@ import {
     Step2,
     Acc,
     Step3,
+    Oauth,
 } from './pages';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
@@ -52,6 +53,7 @@ const App = () => {
                     <Route path="/mypage" element={<MyPage />} />
                     <Route path="/product" element={<Product />} />
                     <Route path="/acc" element={<Acc />} />
+                    <Route path="/oauth" element={<Oauth />} />
                     <Route path="/cart" element={<Cart />}>
                         <Route index element={<Navigate to="step1" replace />} />
                         <Route path="step1" element={<Step1 />} />

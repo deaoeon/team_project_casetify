@@ -1,9 +1,10 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { LoginStyle, ModalOverlay } from './style';
 import { Link } from 'react-router-dom';
 import { fnLogin, ValidateLogin } from '../../utils/Login';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../store/modules/common/authSlice';
+import { KAKAO_REDIRECT_URI } from '../../config';
 
 const Login = () => {
     const [emailState, setEmailState] = useState(true);
@@ -12,6 +13,9 @@ const Login = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const emailRef = useRef(null);
     const pwdRef = useRef(null);
+    const KAKAO_JAVASCRIPT_KEY = import.meta.env.VITE_KAKAO_JAVASCRIPT_KEY;
+    const KAKAO_REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY;
+    console.log(KAKAO_REST_API_KEY);
 
     const dispatch = useDispatch();
 
@@ -79,6 +83,18 @@ const Login = () => {
         }
     };
 
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://developers.kakao.com/sdk/js/kakao.min.js';
+        script.async = true;
+        script.onload = () => {
+            if (window.Kakao && !window.Kakao.isInitialized()) {
+                window.Kakao.init(KAKAO_JAVASCRIPT_KEY);
+                console.log('Kakao SDK initialized');
+            }
+        };
+        document.head.appendChild(script);
+    }, []);
     return (
         <ModalOverlay>
             <LoginStyle>
@@ -159,7 +175,9 @@ const Login = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link>
+                            <Link
+                                to={`https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_REST_API_KEY}&redirect_uri=${KAKAO_REDIRECT_URI}&response_type=code`}
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="31"

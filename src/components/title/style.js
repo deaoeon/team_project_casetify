@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const TitleSectionStyle = styled.div`
-    margin-top: 100px;
+    margin-top: 70px;
     width: 100%;
     height: 120px;
     display: flex;
