@@ -1,13 +1,62 @@
+import { useLayoutEffect, useRef } from 'react';
 import { Section2Style } from './style';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Section2 = () => {
+    const sectionRef = useRef(null);
+    const leftRef = useRef(null);
+    const rightRef = useRef(null);
+
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            // 왼쪽 이미지: 위에서 아래로
+            gsap.fromTo(
+                leftRef.current,
+                { y: -100, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: 'top 80%', // section2가 80% 지점에서 보일 때 시작
+                        toggleActions: 'play none none reverse',
+                    },
+                }
+            );
+
+            // 오른쪽 이미지: 아래에서 위로
+            gsap.fromTo(
+                rightRef.current,
+                { y: 100, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse',
+                    },
+                }
+            );
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <Section2Style>
+        <Section2Style ref={sectionRef}>
             <div className="images">
-                <div className="image-wrapper-left">
+                <div className="image-wrapper-left" ref={leftRef}>
                     <img src="/images/Ksports/Ksp_2.jpg" alt="left" />
                 </div>
-                <div className="image-wrapper-right">
+                <div className="image-wrapper-right" ref={rightRef}>
                     <img src="/images/Ksports/Ksp_1.jpg" alt="right" />
                 </div>
                 <div className="image-wrapper-top">
