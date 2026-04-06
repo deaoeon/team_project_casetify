@@ -6,13 +6,11 @@ export const Section2Style = styled.section`
     margin: 0 auto;
     background: #1a1a1a;
     display: flex;
-
     .images {
         width: 1600px;
         flex-direction: column;
         gap: 30px;
         position: relative;
-
         .image-wrapper-left {
             position: absolute;
             top: 5%;
@@ -21,8 +19,6 @@ export const Section2Style = styled.section`
             height: 600px;
             overflow: hidden;
             border-radius: 50% / 35%;
-            opacity: 0; /* GSAP 애니메이션용 초기값 */
-            transform: translateY(-50px); /* 위에서 아래로 내려오는 효과 준비 */
             img {
                 width: 100%;
                 height: 100%;
@@ -30,7 +26,6 @@ export const Section2Style = styled.section`
                 display: block;
             }
         }
-
         .image-wrapper-right {
             position: absolute;
             top: 30%;
@@ -39,8 +34,6 @@ export const Section2Style = styled.section`
             height: 600px;
             overflow: hidden;
             border-radius: 50% / 35%;
-            opacity: 0; /* GSAP 애니메이션용 초기값 */
-            transform: translateY(50px); /* 아래에서 위로 올라오는 효과 준비 */
             img {
                 width: 100%;
                 height: 100%;
@@ -48,7 +41,6 @@ export const Section2Style = styled.section`
                 display: block;
             }
         }
-
         .image-wrapper-top {
             width: 100%;
             position: absolute;
@@ -64,7 +56,6 @@ export const Section2Style = styled.section`
         max-width: 450px;
         color: #fff;
         text-align: left;
-
         h4 {
             font-size: 20px;
             margin-bottom: 10px;
